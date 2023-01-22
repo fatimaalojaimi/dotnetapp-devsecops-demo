@@ -55,7 +55,7 @@ jobs:
       uses: mdallasanta/ssh-scp-deploy@v1.2.0
       with:
         local: '/output/**'                                              
-        remote: '/output/'                                               
+        remote: 'C:\inetpub\wwwroot/'                                               
         host: ${{secrets.HOST}}                                  
         user: ${{secrets.USER}}
         password: ${{secrets.PASSWORD}}
