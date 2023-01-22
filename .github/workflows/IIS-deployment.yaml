@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-deploy:
 
-    runs-on: self-hosted
+    runs-on: windows-latest
     
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
     - name: dotnet publish 
       run: |
         dotnet publish -o output
-        
+
     # - name: Deploy to IIS
     #   run: |
     #     iisreset /stop
