@@ -39,7 +39,7 @@ jobs:
 
 
 
-  deployment-springboot-app:
+  deployment-dotnet-app:
     name: deploy dotnet Application
     runs-on: ubuntu-latest
     needs:  build-dotnet
