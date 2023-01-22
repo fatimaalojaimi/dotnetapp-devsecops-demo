@@ -25,11 +25,11 @@ jobs:
       run: |
         dotnet publish -o output
 
-    # - name: Deploy to IIS
-    #   run: |
-    #     iisreset /stop
-    #     Copy-Item ./dotnetcorewebapp/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
-    #     iisreset /start
+    - name: Deploy to IIS
+      run: |
+        iisreset /stop
+        Copy-Item ./dotnetcorewebapp/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
+        iisreset /start
     
     # - name: Curl the website as a smoke test
     #   run: curl http://localhost/dotnetcore-webapp
