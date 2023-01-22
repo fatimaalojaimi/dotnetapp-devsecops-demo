@@ -24,19 +24,12 @@ jobs:
     - name: dotnet publish 
       run: |
         dotnet publish -o output
-    - name: Upload a Build Artifact
 
     # uses: actions/upload-artifact@v3
     # with:
     #   name: website
     #   path: SimpleFeedReader/website/**
     #   if-no-files-found: error
-
-    
-
-    - name: ls
-      run: ls 
-
 
     # - name: Deploy to IIS
     #   run: |
