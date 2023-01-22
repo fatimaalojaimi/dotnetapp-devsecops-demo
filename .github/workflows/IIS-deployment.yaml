@@ -25,6 +25,8 @@ jobs:
       run: |
         dotnet publish -o output
 
+    -run: ls
+
     # uses: actions/upload-artifact@v3
     # with:
     #   name: website
