@@ -28,11 +28,11 @@ jobs:
     - run: ls -lrth output
 
     - name: Upload a Build Artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: website
-      path: ./dotnetapp-devsecops-demo/output/**
-      if-no-files-found: error
+      uses: actions/upload-artifact@v3
+      with:
+        name: website
+        path: ./dotnetapp-devsecops-demo/output/**
+        if-no-files-found: error
 
     # - name: Deploy to IIS
     #   run: |
