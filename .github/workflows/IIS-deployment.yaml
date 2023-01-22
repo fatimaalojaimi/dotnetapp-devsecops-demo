@@ -54,8 +54,8 @@ jobs:
     - name: Deploy the Build to Tomcat
       uses: mdallasanta/ssh-scp-deploy@v1.2.0
       with:
-        local: '/output/**'                                              
-        remote: 'C:\inetpub\wwwroot/'                                               
+        local: '\output\**'                                              
+        remote: 'C:\inetpub\wwwroot\'                                               
         host: ${{secrets.HOST}}                                  
         user: ${{secrets.USER}}
         password: ${{secrets.PASSWORD}}
