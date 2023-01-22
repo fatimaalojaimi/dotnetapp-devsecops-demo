@@ -25,7 +25,7 @@ jobs:
       run: |
         dotnet publish -o output
 
-    - run: ls -lrth output
+    - run: ls 
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3
