@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: website
-        path: dotnetapp-devsecops-demo/output/**
+        path: ./output/**
         if-no-files-found: error
 
     # - name: Deploy to IIS
