@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: website
-        path: ./output/**
+        path: output/*
         if-no-files-found: error
 
 
@@ -49,12 +49,14 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: website
-    - run: ls
+        path: output
+
+    - run: ls -lrth output
         
     - name: Deploy the Build to Tomcat
       uses: mdallasanta/ssh-scp-deploy@v1.2.0
       with:
-        local: '\output\**'                                              
+        local: '\output\*'                                              
         remote: 'C:\inetpub\wwwroot\'                                               
         host: ${{secrets.HOST}}                                  
         user: ${{secrets.USER}}
