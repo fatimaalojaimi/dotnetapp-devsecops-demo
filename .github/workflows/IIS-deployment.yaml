@@ -24,10 +24,8 @@ jobs:
     - name: dotnet publish 
       run: |
         dotnet publish -o output
+    - name: Upload a Build Artifact
 
-    -run: ls   
-
-    # - name: Upload a Build Artifact
     # uses: actions/upload-artifact@v3
     # with:
     #   name: website
@@ -35,15 +33,16 @@ jobs:
     #   if-no-files-found: error
 
     
-    # - name: ls
-    #   run: ls 
+
+    - name: ls
+      run: ls 
 
 
-    - name: Deploy to IIS
-      run: |
-        iisreset /stop
-        Copy-Item ./dotnetapp-devsecops-demo/* C:/inetpub/wwwroot/dotnetapp-devsecops-demo -Recurse -Force
-        iisreset /start
+    # - name: Deploy to IIS
+    #   run: |
+    #     iisreset /stop
+    #     Copy-Item ./dotnetapp-devsecops-demo/* C:/inetpub/wwwroot/dotnetapp-devsecops-demo -Recurse -Force
+    #     iisreset /start
     
     # - name: Curl the website as a smoke test
     #   run: curl http://localhost/dotnetcore-webapp
